@@ -225,7 +225,7 @@ h2 {
 
 .project {
     
-    background: #fff url("/img/header/header_bg.jpg") center no-repeat;
+    background: #fff url("img/header/header_bg.jpg") center no-repeat;
     background-size: cover;
 }
 
@@ -380,7 +380,7 @@ h2 {
     max-width: 720px;
     height: 416px;
     margin-left: 40px;
-    background: url("../img/architects/architects_img.jpg") no-repeat center;
+    background: url("img/architects/architects_img.jpg") no-repeat center;
     background-size: cover;
     flex-shrink: 1;
 }
@@ -595,7 +595,7 @@ h2 {
     margin-left: 40px;
     max-width: 720px;
     height: 377px;
-    background: url("../img/questions/questions_img.jpg") no-repeat center;
+    background: url("img/questions/questions_img.jpg") no-repeat center;
     background-size: cover;
     
 }
