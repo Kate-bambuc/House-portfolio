@@ -92,11 +92,12 @@ h2 {
     
     display: flex;
     align-items: center;
-    
+    width: 100%;
+    max-width: 170px;
 }
 
 .logo__icon {
-    
+    width: 100%;
     width: 31px;
     height: 31px;
 }
@@ -381,6 +382,7 @@ h2 {
     margin-left: 40px;
     background: url("../img/architects/architects_img.jpg") no-repeat center;
     background-size: cover;
+    flex-shrink: 1;
 }
 
 /* about */
@@ -390,6 +392,7 @@ h2 {
 
 .about__inner {
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .about__title{
@@ -409,7 +412,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
-    padding-bottom: 100px;
+    
 }
 
 .about__item {
@@ -486,9 +489,24 @@ h2 {
 .gallery__slider-col {
     margin-right: 40px;
     width: 33.333%;
+    
+    
 }
 .gallery__slider-col:last-child {
     margin-right: 0;
+}
+
+
+
+.gallery__slider-img {
+    width: 100%;
+    cursor: pointer;
+    transition: transform .2s linear;
+    
+}
+
+.gallery__slider-img:hover {
+    transform: scale(1.05);
 }
 
 .gallery__slider-img-middle {
@@ -496,16 +514,6 @@ h2 {
 }
 .gallery__slider-img-middle:last-child {
     margin-bottom: 0;
-}
-
-.gallery__slider-img {
-    width: 100%;
-    cursor: pointer;
-    transition: transform .2s linear;
-}
-
-.gallery__slider-img:hover {
-    transform: scale(1.05);
 }
 
 .gallery__rects {
@@ -618,6 +626,8 @@ h2 {
     padding-bottom: 100px;
 }
 
+
+
 .footer__logo-title span, 
 .footer__logo-title p, 
 .footer__info p,
@@ -700,9 +710,12 @@ h2 {
 
     /* header */
 
+    
+
     .header__navigation, .header__callme {
         display: none;
     }
+
 
     .burger {
         display: block;
@@ -715,25 +728,133 @@ h2 {
         flex-direction: column;
         width: 100%;
         height: 100%;
-        position: absolute;
-        top: 100%;
-        right: 0;
+        
         text-align: center;
         
-        background-color: rgba(254, 254, 254, .9);
+        /* background-color: rgba(254, 254, 254, .9); */
     }
 
     .header__navigation.show {
         display: flex;
+        
+    }
+
+    /* .header__navigation.show  .header{
+        background: rgba(254, 254, 254, .9);
+    } */
+
+    .header__navigation.show .header__inner {
+        background-color: rgba(254, 254, 254, .9);
+        margin-top: 15px;
     }
 
     .header__nav-item {
         margin-right: 0;
     }
 
+    /* Architects */
+
+    .architects__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .architects__img {
+        margin-top: 30px;
+        margin-left: 0;
+    }
     /* gallery */
-    .gallery__slider-col {
+    .gallery__slider-item {
         width: 50%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 
+    .gallery__slider-col {
+        width: 100%;
+        margin-bottom: 40px;
+        margin-right: 0;
+        
+    }
+    .gallery__slider-col-middle {
+        margin-right: 0;
+    }
+
+    /* questions */
+
+    .questions__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .questions__img {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+    /* Footer */
+
+    .footer__nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__nav-item {
+        margin-top: 5px;
+        
+    }
+    .footer__nav-item:first-child {
+        margin-top: 0;
+    }
+
+    .footer__inner {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+  
+}
+
+
+@media(max-width:768px) {
+    /* Project */
+
+    .project__title {
+        font-size: 45px;
+    }
+
+    /* About */
+
+    .about__inner {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .about__block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__item {
+        margin-right: 0;
+        margin-top: 40px;
+    }
+
+    .about__item:first-child {
+        margin-top: 0;
+    }
+
+    /* gallery */
+    .gallery__slider-item {
+        width: 70%;
+        
+    }
+
+    /* Footer */
+
+    .footer__inner {
+        flex-wrap: wrap;
+    }
+
+   
 }

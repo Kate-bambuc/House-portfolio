@@ -42,16 +42,12 @@ window.addEventListener('DOMContentLoaded', () => {
 			item.addEventListener('click', (event) => {
 				event.preventDefault();
 
-			let id = item.getAttribute('data-scroll');
-			
-			//const topOffset = document.getElementById(navElement);
-			//let navOffset = navElements.getBoundingClientRect().top;
-			//let navOffset = navElement.offsetTop;
-			//console.log(navElement, navOffset);
-			document.querySelector(id).scrollIntoView({
-				behavior: 'smooth',
-				block: 'start'
-			});
+				let id = item.getAttribute('data-scroll');
+
+				document.querySelector(id).scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				});
 			clearActive ();
 			item.classList.add('active');
 		});
